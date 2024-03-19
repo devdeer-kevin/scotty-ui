@@ -12,13 +12,16 @@ export default function DataInputComponent() {
     const [inputEndDate, setInputEndDate] = useState('')
     // State to set company name
     const [inputCompany, setInputCompany] = useState('')
-    // Method to handle input change
+
+    // Method to handle start date input change
     const handleStartDate = (event: ChangeEvent<HTMLInputElement>) => {
         setInputStartDate(event.target.value)
     }
+    // Method to handle end date input change
     const handleEndDate = (event: ChangeEvent<HTMLInputElement>) => {
         setInputEndDate(event.target.value)
     }
+    // Method to handle company input change
     const handleCompany = (event: ChangeEvent<HTMLInputElement>) => {
         setInputCompany(event.target.value)
     }
