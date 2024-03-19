@@ -26,6 +26,7 @@ export default function DataInputComponent() {
         setInputCompany(event.target.value)
     }
 
+    // Method to fetch API
     const fetchAPI = async () => {
         // Set start date to ISO format
         const isoStartDate = new Date(inputStartDate).toISOString()
