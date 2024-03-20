@@ -1,5 +1,10 @@
 import { NextResponse, NextRequest } from 'next/server'
 
+/**
+ * Handles the POST request for retrieving entries data.
+ * @param req - The NextRequest object containing the request details.
+ * @returns A Promise that resolves to the response containing the entries data, or an error response.
+ */
 export async function POST(req: NextRequest) {
     const body = await req.json()
     const from = body.isoStartDate as string
