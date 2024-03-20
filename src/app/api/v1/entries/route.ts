@@ -2,8 +2,8 @@ import { NextResponse, NextRequest } from 'next/server'
 
 export async function POST(req: NextRequest) {
     const body = await req.json()
-    const password = process.env.NEXT_PUBLIC_PASSWORD as string
-    const user = process.env.NEXT_PUBLIC_USER as string
+    const password = process.env.USER_SCOTTY_API_PASSWORD as string
+    const user = process.env.USER_SCOTTY_API_USER as string
     const from = body.isoStartDate as string
     const to = body.isoEndDate as string
     const clientName = body.clientName as string
