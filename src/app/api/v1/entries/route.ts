@@ -16,6 +16,7 @@ export async function POST(req: NextRequest) {
     const user = process.env.USER_SCOTTY_API_USER as string
     const url = process.env.SCOTTY_API as string
 
+    // Fetch the entries data
     const response = await fetch(url, {
         method: 'POST',
         headers: {

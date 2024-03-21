@@ -68,6 +68,7 @@ export default function DataInputComponent() {
         setExportCreated(true)
     }
 
+    // Method to handle authorized state change
     const handleAuthorizedChange = (authorized: boolean) => {
         setAuthorized(authorized)
     }
