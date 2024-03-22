@@ -2,7 +2,7 @@
 
 import { CheckBadgeIcon } from '@heroicons/react/16/solid'
 import { ArrowPathIcon } from '@heroicons/react/20/solid'
-import { useState, ChangeEvent, MouseEvent } from 'react'
+import { useState, ChangeEvent } from 'react'
 import LoginComponent from '../login/loginComponent'
 
 export default function DataInputComponent() {
