@@ -46,6 +46,7 @@ export default function DataInputComponent() {
         // Set loading state to true
         setLoading(true)
 
+        // Fetch API
         const response = await fetch('/api/v1/entries', {
             method: 'POST',
             headers: {
