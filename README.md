@@ -2,6 +2,13 @@
 
 Welcome to Scotty UI, the user interface designed specifically for interacting with the Coffee Cup API. Brew up some powerful user experiences with Scotty UI's intuitive and elegant components.
 
+## Features
+
+-   **👌🏻 Interactive Components:** From customer input fields to date selectors, Scotty UI has everything you need.
+-   **💾 Data-Driven:** Designed to work seamlessly with the DEVDEER Scotty API, making it easier to fetch and manage Coffee Cup data.
+-   **🌈 Responsive Design:** The app looks great on devices of all sizes.
+-   **🔒 User Authentication via Kinde:** A seamless and secure sign in process using just the email address provided by Kinde.
+
 ## Quick Start
 
 Dive into the world of coffee cup data visualization and management with just a few steps. Here's how you can start using Scotty UI.
@@ -23,12 +30,6 @@ yarn
 ### Usage
 
 Scotty UI makes it effortless to fetch and display coffee cuo data.
-
-## Features
-
--   **Interactive Components:** From customer input fields to date selectors, Scotty UI has everything you need.
--   **Data-Driven:** Designed to work seamlessly with the DEVDEER Scotty API, making it easier to fetch and manage Coffee Cup data.
--   **Responsive Design:** The app looks great on devices of all sizes.
 
 ## Contributing
 
