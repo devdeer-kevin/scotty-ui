@@ -29,7 +29,7 @@ yarn
 
 ### Usage
 
-Scotty UI makes it effortless to fetch and display coffee cuo data.
+Scotty UI makes it effortless to fetch and display coffee cup data.
 
 ## Contributing
 
