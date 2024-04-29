@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
     title: 'Scotty UI',
@@ -25,7 +26,9 @@ export default async function RootLayout({
                     <nav className="fixed top-0 w-full">
                         <div className="flex flex-row justify-between p-4">
                             <div>
-                                <h1 className="text-4xl font-bold text-center text-slate-700">Scotty UI</h1>
+                                <Link href="/">
+                                    <h1 className="text-4xl font-bold text-center text-slate-700">Scotty UI</h1>
+                                </Link>
                             </div>
                             <div className="flex flex-row gap-4">
                                 {(await isAuthenticated()) ? (
