@@ -7,7 +7,7 @@ Welcome to Scotty UI, the user interface designed specifically for interacting w
 -   **👌🏻 Interactive Components:** From customer input fields to date selectors, Scotty UI has everything you need.
 -   **💾 Data-Driven:** Designed to work seamlessly with the DEVDEER Scotty API, making it easier to fetch and manage Coffee Cup data.
 -   **🌈 Responsive Design:** The app looks great on devices of all sizes.
--   **🔒 User Authentication via Kinde:** A seamless and secure sign in process using just the email address provided by Kinde.
+-   **🔒 User Authentication via MSAL:** A seamless and secure sign in process using just the email address provided by MSAL.
 
 ## Quick Start
 

@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -14,11 +12,6 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    const { isAuthenticated, getUser } = getKindeServerSession()
-    const user = await getUser()
-    const givenName = user?.given_name
-    const familyName = user?.family_name
-
     return (
         <html lang="en">
             <body>
@@ -31,20 +24,13 @@ export default async function RootLayout({
                                 </Link>
                             </div>
                             <div className="flex flex-row gap-4">
-                                {(await isAuthenticated()) ? (
-                                    <div className="flex flex-row items-baseline gap-4">
-                                        <div>
-                                            <h1 className="text-lg font-normal text-center text-slate-700">
-                                                Hello, {givenName} {familyName}
-                                            </h1>
-                                        </div>
-                                        <LogoutLink className="bg-slate-200 p-2 rounded-md">Sign out</LogoutLink>
+                                <div className="flex flex-row items-baseline gap-4">
+                                    <div>
+                                        <h1 className="text-lg font-normal text-center text-slate-700">Hello</h1>
                                     </div>
-                                ) : (
-                                    <LoginLink className="bg-slate-200 p-2 rounded-md" postLoginRedirectURL="/file-export">
-                                        Sign in
-                                    </LoginLink>
-                                )}
+                                    <div className="bg-slate-200 p-2 rounded-md">Sign out</div>
+                                </div>
+                                <div className="bg-slate-200 p-2 rounded-md">Sign in</div>
                             </div>
                         </div>
                     </nav>
