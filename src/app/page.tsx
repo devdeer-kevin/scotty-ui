@@ -1,9 +1,18 @@
-import { redirect } from 'next/navigation'
+'use client'
 
-export default async function Home() {
+import AppProvider from './provider'
+import { AuthenticatedTemplate, UnauthenticatedTemplate } from '@azure/msal-react'
+import DataInputComponent from '../../components/dataInput'
+
+export default function Home() {
     return (
-        <>
-            <div className="text-slate-50">Please sign in to continue.</div>
-        </>
+        <AppProvider>
+            <AuthenticatedTemplate>
+                <DataInputComponent />
+            </AuthenticatedTemplate>
+            <UnauthenticatedTemplate>
+                <div className="text-slate-50">Please sign in to continue.</div>
+            </UnauthenticatedTemplate>
+        </AppProvider>
     )
 }
