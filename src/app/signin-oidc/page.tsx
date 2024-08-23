@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect } from 'react'
-import DataInputComponent from '../../../components/dataInput'
 import { useIsAuthenticated, useMsal } from '@azure/msal-react'
+import DataInputComponent from '../../../components/dataInput'
+import { useEffect } from 'react'
 
-export default function FileExport() {
+export default function Connect() {
     const instance = useMsal()
     const isAuthenticated = useIsAuthenticated()
 
@@ -14,6 +14,5 @@ export default function FileExport() {
             instance.instance.loginPopup()
         }
     }, [isAuthenticated, instance])
-
     return <DataInputComponent />
 }
