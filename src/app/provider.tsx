@@ -26,17 +26,23 @@ const configuration: Configuration = {
     },
 }
 
-export default function AppProvider({
-    children,
-}: Readonly<{
-    children: React.ReactNode
-}>) {
+export default function AppProvider() {
+    const instance = useMsal()
+    const isAuthenticated = useIsAuthenticated()
+
+    useEffect(() => {
+        if (!isAuthenticated) {
+            // If another component has already invoked an interactive API this will throw
+            instance.instance.loginPopup()
+        }
+    }, [isAuthenticated, instance])
+
     const pca = new PublicClientApplication(configuration)
     msalInstance = pca
 
     return (
         <MsalProvider instance={pca}>
-            <MsalAuthenticationTemplate interactionType={InteractionType.Redirect}>{children}</MsalAuthenticationTemplate>
+            <MsalAuthenticationTemplate interactionType={InteractionType.Redirect}></MsalAuthenticationTemplate>
         </MsalProvider>
     )
 }
